@@ -66,13 +66,13 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 1em;
-    gap: 10px; /* отступ между элементами */
+    gap: 10px;
 }
 .interval-setting label, 
 .recording-setting button, 
 .recording-setting p {
   font-size: 14px;
-  max-width: 15%;
+  max-width: 30%;
 }
 
 .interval-setting input {
