@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>System Monitor</title>
+</head>
+<body>
+    <h1 class="h1">System Monitor</h1>
+    <p id="lastUpdate">Time: {{ sys_info.time }}</p>
+
+    <table>
+        <tr>
+            <th>Parameter</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>CPU Usage</td>
+            <td id="cpu-usage">{{ sys_info.cpu_percent }}%</td>
+        </tr>
+        <tr>
+            <td>RAM Usage</td>
+            <td id="ram-usage">{{ sys_info.ram_percent }}% ({{ "%.2f"|format(sys_info.ram_used) }} GB / {{ "%.2f"|format(sys_info.ram_total) }} GB)</td>
+        </tr>
+        <tr>
+            <td>Disk Usage</td>
+            <td id="disk-usage">{{ sys_info.disk_percent }}% ({{ "%.2f"|format(sys_info.disk_used) }} GB / {{ "%.2f"|format(sys_info.disk_total) }} GB)</td>
+        </tr>
+    </table>
+    <div class="interval-setting">
+      <label class="upd-label" for="intervalInput">Update Interval (seconds):</label>
+      <input type="number" id="intervalInput" value="1" min="1">
+      <button onclick="setIntervalUpdate()">Set Interval</button>
+      <button id="recordingBtn" onclick="switchRecording()">
+        {% if is_recording %} Stop Recording {% else %} Start Recording {% endif %}
+      </button>
+      <p id="recordingTime">Recording Time: 00:00:00</p>
+      <script src="{{ url_for('static', filename='/js/dataUsage.js') }}"></script>
+    </div>
+
+</body>
+</html>
