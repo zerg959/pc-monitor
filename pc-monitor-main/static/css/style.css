@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 40%; /* Adjust width as needed */
+  max-width: 40%;
   background-color: white;
   border-radius: 8px;
   padding: 20px;
@@ -22,7 +22,7 @@ body {
 }
 
 .header {
-  background-color: #3498db; /* Синий цвет для шапки */
+  background-color: #3498db;
   color: white;
   padding: 20px;
   text-align: center;
