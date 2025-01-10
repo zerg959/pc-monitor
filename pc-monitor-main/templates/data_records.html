@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>System Monitor</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="h1">System Monitor</h1>
+    </header>
+  <h1>DB records</h1>
+  <table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>CPU %</th>
+            <th>RAM %</th>
+            <th>RAM Used (GB)</th>
+            <th>RAM Total (GB)</th>
+            <th>Disk %</th>
+            <th>Disk Used (GB)</th>
+            <th>Disk Total (GB)</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+            <tr>
+                <td>{{ row[0] }}</td>          <!-- ID -->
+                <td>{{ "%.2f"|format(row[1]) }}</td>          <!-- CPU Percent -->
+                <td>{{ "%.2f"|format(row[2]) }}</td>          <!-- RAM Percent -->
+                <td>{{ "%.2f"|format(row[3]) }}</td>          <!-- RAM Used -->
+                <td>{{ "%.2f"|format(row[4]) }}</td>          <!-- RAM Total -->
+                <td>{{ "%.2f"|format(row[5]) }}</td>          <!-- Disk Percent -->
+                <td>{{ "%.2f"|format(row[6]) }}</td>          <!-- Disk Used -->
+                <td>{{ "%.2f"|format(row[7]) }}</td>          <!-- Disk Total -->
+                <td>{{ row[8] }}</td>          <!-- Time -->
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

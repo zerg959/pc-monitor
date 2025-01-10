@@ -49,3 +49,12 @@ def insert_sys_data(data):
             )
     con.commit()
     con.close()
+
+
+def db_records_list():
+    con = init_db()
+    cur = con.cursor()
+    cur.execute('''SELECT * from sys_data''')
+    rows = cur.fetchall()
+    con.close()
+    return rows

@@ -8,7 +8,7 @@ import db_control
 app = Flask(__name__)
 
 
-is_recording = False # Flag to control recording status
+is_recording = False  # Flag to control recording status
 
 
 def get_sys_info():
@@ -46,6 +46,11 @@ def switch_recording():
     global is_recording
     is_recording = not is_recording
     return jsonify({'is_recording': is_recording})
+
+@app.route('/db_records')
+def data_records():
+    rows = db_control.db_records_list()
+    return render_template("data_records.html", rows=rows)
 
 
 if __name__ == '__main__':

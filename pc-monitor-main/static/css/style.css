@@ -27,6 +27,14 @@ body {
   padding: 20px;
   text-align: center;
 }
+.db-records-btn {
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+}
 
 .main {
   padding: 20px;
@@ -81,17 +89,19 @@ body {
 }
 
 .interval-setting button, 
-.recording-setting button{
+.recording-setting button {
   background-color: #4CAF50;
   color: white;
   border: none;
   padding: 1em 1em;
   border-radius: 5px;
   cursor: pointer;
+  width: 100px;
 }
 
 .interval-setting button:hover, 
-.recording-setting button:hover{
+.recording-setting button:hover,
+.db-records-btn:hover {
   background-color: #367c39;
 }
 h1, p, table {
