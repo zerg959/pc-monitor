@@ -20,5 +20,9 @@
   - интервал таймера можно задавать с помощью "Set Interval".
   - по кнопке "Stop Recording" запись в БД останавливается, таймер обнуляется.
 7. Настроено автоматическое тестирование на github actions изменений при пуше изменений в ветку и пул-реквесте.
+####Скриншоты:
+![Главная] (https://github.com/zerg959/pc-monitor/blob/main/pc-monitor-main/static/screenshots/pc-monitor.JPG)
+![Данные] (https://github.com/zerg959/pc-monitor/blob/main/pc-monitor-main/static/screenshots/pc-monitor-db-data.JPG)
+![Тесты] (https://github.com/zerg959/pc-monitor/blob/main/pc-monitor-main/static/screenshots/pc-monitor-tests.JPG)
 
 
