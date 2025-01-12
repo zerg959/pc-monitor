@@ -26,5 +26,5 @@ jobs:
           python -m pip install -r pc-monitor-main/requirements.txt
       - name: Run tests
         run: |
-          flake8 pc-monitor-main/main.py pc-monitor-main/db_control.py pc-monitor-main/tests/
+          flake8 main.py db_control.py tests/
           pytest -m pc-monitor-main/tests -vs
