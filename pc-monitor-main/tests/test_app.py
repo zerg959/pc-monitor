@@ -1,7 +1,6 @@
 import pytest
-from unittest.mock import patch, MagicMock
-from flask import Flask, render_template, jsonify
-from app import app, get_sys_info, is_recording
+from unittest.mock import patch
+from main import app  # get_sys_info, is_recording
 import db_control
 
 
@@ -69,8 +68,8 @@ def test_data_route(client):
             )
 
 
-@patch('app.db_control.insert_sys_data')
-@patch('app.is_recording', new=True)
+@patch('main.db_control.insert_sys_data')
+@patch('main.is_recording', new=True)
 def test_data_route_with_recording(mock_insert_sys_data, client):
     """
     Check if route '/data' calls db_control.insert_sys_data,
@@ -84,8 +83,8 @@ def test_data_route_with_recording(mock_insert_sys_data, client):
     data = response.get_json()
     mock_insert_sys_data.assert_called_with(data)
 
-@patch('app.db_control.insert_sys_data')
-@patch('app.is_recording', new=False)
+@patch('main.db_control.insert_sys_data')
+@patch('main.is_recording', new=False)
 def test_data_route_without_recording(mock_insert_sys_data, client):
     """
     Check if route '/data' does not call db_control.insert_sys_data,
