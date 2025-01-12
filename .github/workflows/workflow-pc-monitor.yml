@@ -27,4 +27,4 @@ jobs:
       - name: Run tests
         run: |
           flake8 pc-monitor-main/main.py pc-monitor-main/db_control.py pc-monitor-main/tests/
-          pytest -m pc-monitor-main/tests/ -sv
+          pytest -m pc-monitor-main/tests -v
