@@ -11,6 +11,7 @@ def client():
         db_control.init_db()
     return app.test_client()
 
+
 @pytest.fixture
 def test_db():
     con = db_control.init_db()
@@ -82,6 +83,7 @@ def test_data_route_with_recording(mock_insert_sys_data, client):
     assert response.is_json
     data = response.get_json()
     mock_insert_sys_data.assert_called_with(data)
+
 
 @patch('main.db_control.insert_sys_data')
 @patch('main.is_recording', new=False)

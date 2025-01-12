@@ -59,7 +59,7 @@ def test_db_records_list(test_db):
     Check if DB return all records.
     """
     print("Check if DB return all records.")
-    con = test_db
+    # con = test_db
     test_data = {
         'cpu_percent': 10.0,
         'ram_percent': 50.0,

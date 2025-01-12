@@ -1,5 +1,4 @@
 import sqlite3
-import time
 
 
 DATABASE = 'sys_monitor.db'

@@ -45,17 +45,15 @@ def data():
         db_control.insert_sys_data(sys_info)
     return jsonify(sys_info)
 
+
 @app.route('/switch_recording', methods=['POST'])
 def switch_recording():
     global is_recording
     is_recording = not is_recording
     return jsonify({'is_recording': is_recording})
 
+
 @app.route('/db_records')
 def data_records():
     rows = db_control.db_records_list()
     return render_template("data_records.html", rows=rows)
-
-
-# if __name__ == '__main__':
-#     app.run(host='localhost', debug=True)
