@@ -10,3 +10,4 @@ pytest
 coverage
 pytest-cov
 flake8
+pytest-github-actions-reporter
