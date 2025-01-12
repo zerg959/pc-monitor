@@ -30,7 +30,11 @@ def get_sys_info():
 @app.route('/')
 def index():
     sys_info = get_sys_info()
-    return render_template("index.html", sys_info=sys_info, is_recording=is_recording)
+    return render_template(
+        "index.html",
+        sys_info=sys_info,
+        is_recording=is_recording
+        )
 
 
 @app.route('/data')
