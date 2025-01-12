@@ -21,6 +21,7 @@
   - по кнопке "Stop Recording" запись в БД останавливается, таймер обнуляется.
 7. Настроено автоматическое тестирование на github actions изменений при пуше изменений в ветку и пул-реквесте.
 <hr><br>
+
 ![Главная](pc-monitor-main/static/screenshots/pc-monitor.JPG)
 ![Данные](pc-monitor-main/static/screenshots/pc-monitor-db-data.JPG)
 ![Тесты](pc-monitor-main/static/screenshots/pc-monitor-tests.JPG)
