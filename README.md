@@ -4,7 +4,7 @@
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 
 
-Простая десктопная утилита для мониторинга производительности компьютера.
+Простое веб-приложение для мониторинга производительности.
 1. Установить python, pip
 2. Перейти в директорию 'pc-monitor-main' (cd pc-monitor-main)
 3. Создать и запустить виртуальное окружение:
