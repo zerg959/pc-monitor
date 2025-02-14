@@ -4,22 +4,22 @@
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 
 
-Простое веб-приложение для мониторинга производительности.
-1. Установить python, pip
-2. Перейти в директорию 'pc-monitor-main' (cd pc-monitor-main)
-3. Создать и запустить виртуальное окружение:
+Simple web-app PC-monitor.
+1. Install python, pip
+2. Open root folder 'pc-monitor-main' (cd pc-monitor-main)
+3. Create and start virtual environment:
   - python3 -m venv venv
   - source venv/bin/activate
-4. Установить зависимости из requirements.txt:
+4. Install requierements из requirements.txt:
   - pip install -r requirements.txt
-5. Запустить сервер Flask:
+    Start Flask server:
   - python3 app.py
-6. Приложение запустится на localhost.
-  - по умолчанию, параметры обновляются каждую секунду, данные выводятся на страницу
-  - при нажатии на "Start Recording" создается БД Sqlite, в которую записываются параметры PCб и стартует таймер, отражающий время записи в БД.
-  - интервал таймера можно задавать с помощью "Set Interval".
-  - по кнопке "Stop Recording" запись в БД останавливается, таймер обнуляется.
-7. Настроено автоматическое тестирование на github actions изменений при пуше изменений в ветку и пул-реквесте.
+    App will start on localhost.
+  - Default update interval is 1 sec, data shows on the page
+  - Button "Start Recording" creates DB Sqlite where data saved and timer starts. Is shows timestamps in DB.
+  - Interaval can be set by "Set Interval" button.
+  - Second tap on "Stop Recording" stopped recording to the DB, timer canceled to 0.
+7. CI/CD on github actions (on push and pull requests).
 <hr><br>
 
 ![Главная](pc-monitor-main/static/screenshots/pc-monitor.JPG)
